@@ -1,0 +1,148 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Layout */
+body {
+    font-family: 'Arial', sans-serif;
+    background: url("/images/spacecraft.jpg"); /* Ensure this path is correct */
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 70%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    margin-top: 80px; /* Space between header and container */
+}
+
+/* Heading */
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+    color: #f3f3f3;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Main Heading */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+
+/* Subheading */
+h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+/* Form Styles */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textbox {
+    margin: 15px 0;
+    width: 80%;  /* Adjust width to center the input boxes */
+    text-align: center; /* Align text inside the input boxes */
+}
+
+.textbox input {
+    padding: 15px;
+    width: 100%;  /* Make the input take the full width of the textbox container */
+    border: 2px solid #61dafb;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.textbox input:focus {
+    border-color: #21a1f1;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+/* Button Container */
+.button-container {
+    display: flex;
+    justify-content: center;  /* Center the buttons horizontally */
+    width: 100%;  /* Ensure the container takes the full width */
+    margin-top: 15px;
+    gap: 10px;  /* Space between buttons */
+}
+
+.btn {
+    padding: 15px 25px;  /* Keep the previous padding */
+    background-color: #61dafb;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+    max-width: 200px;  /* Limit the maximum width of buttons */
+    flex: 1;  /* Allow buttons to grow and take equal space */
+    text-align: center;
+}
+
+.btn:hover {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #1b91e0;
+}
+
+.message {
+    margin-top: 20px;
+    font-size: 1.2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+
+    .button-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 80%; /* Make buttons take more width on smaller screens */
+    }
+}

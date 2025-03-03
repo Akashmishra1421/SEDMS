@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Update Spacecraft - Space Exploration Data Management System</title>
+    <link rel="stylesheet" href="./styles/spacecrafts.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Space Exploration Data Management System</h1>
+        <div class="container">
+            <h1>Update Spacecraft Details</h1>
+            <form id="spacecraftUpdateForm">
+                <input type="hidden" id="spacecraft_id" name="spacecraft_id" value="">
+
+                <div class="textbox">
+                    <input type="text" id="spacecraft_name" name="spacecraft_name" placeholder="Spacecraft Name" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" id="type" name="type" placeholder="Type" required>
+                </div>
+                <div class="textbox">
+                    <input type="number" id="capacity" name="capacity" placeholder="Capacity" required>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="btn">Update Spacecraft</button>
+                </div>
+            </form>
+            
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+
+    <script src="/js/update_spacecrafts.js"></script>
+</body>
+</html>

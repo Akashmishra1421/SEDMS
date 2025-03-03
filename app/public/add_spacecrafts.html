@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Spacecraft - Space Exploration</title>
+    <link rel="stylesheet" href="./styles/spacecrafts.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Space Exploration Data Management System</h1>
+        <div class="container">
+            <form id="spacecraftForm">
+                <h2>Spacecraft Details</h2>
+                <div class="textbox">
+                    <input type="text" placeholder="ID" name="spacecraft_id" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Spacecraft Name" name="spacecraft_name" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Type" name="type" required>
+                </div>
+                <div class="textbox">
+                    <input type="number" placeholder="Capacity" name="capacity" required>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="btn">Add Spacecraft</button>
+                </div>
+            </form>
+            
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    <script src="/js/add_spacecrafts.js"></script>
+</body>
+</html>

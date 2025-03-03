@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data Management - Space Exploration Data Management System</title>
+    <link rel="stylesheet" href="./styles/data_management.css">
+</head>
+
+<body>
+    <h1>Space Exploration Data Management System</h1>
+    <div class="container">
+        <!-- Missions Section -->
+        <h2>Missions</h2>
+        <table id="missionsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Launch Date</th>
+                    <th>Status</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% missions.forEach(function(mission) { %>
+                <tr>
+                    <td><%= mission.mission_id %></td>
+                    <td><%= mission.mission_name %></td>
+                    <td><%= mission.launch_date %></td>
+                    <td><%= mission.status %></td>
+                    <td><%= mission.description %></td>
+                    <td class="action-buttons">
+                        <button class="btn" onclick="updateMission('<%= mission.mission_id %>')">Update</button>
+                        <button class="btn" onclick="deleteMission('<%= mission.mission_id %>')">Delete</button>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <button onclick="location.href='./missions.html'" class="btn">Add Missions</button>
+
+        <!-- Astronauts Section -->
+        <h2>Astronauts</h2>
+        <table id="astronautsTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Birth Date</th>
+                    <th>Nationality</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% astronauts.forEach(function(astronaut) { %>
+                <tr>
+                    <td><%= astronaut.astronaut_id %></td>
+                    <td><%= astronaut.astronaut_name %></td>
+                    <td><%= astronaut.birth_date %></td>
+                    <td><%= astronaut.nationality %></td>
+                    <td class="action-buttons">
+                        <button class="btn" onclick="updateAstronaut('<%= astronaut.astronaut_id %>')">Update</button>
+                        <button class="btn" onclick="deleteAstronaut('<%= astronaut.astronaut_id %>')">Delete</button>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <button onclick="location.href='./astronauts.html'" class="btn">Add Astronauts</button>
+
+        <!-- Spacecraft Section -->
+        <h2>Spacecraft</h2>
+        <table id="spacecraftTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Type</th>
+                    <th>Capacity</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% spacecrafts.forEach(function(spacecraft) { %>
+                <tr>
+                    <td><%= spacecraft.spacecraft_id %></td>
+                    <td><%= spacecraft.spacecraft_name %></td>
+                    <td><%= spacecraft.type %></td>
+                    <td><%= spacecraft.capacity %></td>
+                    <td class="action-buttons">
+                        <button class="btn" onclick="updateSpacecraft('<%= spacecraft.spacecraft_id %>')">Update</button>
+                        <button class="btn" onclick="deleteSpacecraft('<%= spacecraft.spacecraft_id %>')">Delete</button>
+                    </td>
+                </tr>
+                <% }); %>
+            </tbody>
+        </table>
+        <button onclick="location.href='./spacecrafts.html'" class="btn">Add Spacecraft</button>
+    </div>
+
+    <div id="message" class="message"></div>
+    <script src="./js/data_management.js"></script>
+</body>
+
+</html>

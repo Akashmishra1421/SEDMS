@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Mission - Space Exploration Data Management System</title>
+    <link rel="stylesheet" href="./styles/missions.css">
+</head>
+<body>
+    <h1>Space Exploration Data Management System</h1>
+    <div class="container">
+        <h2>Mission Details</h2>
+        <form id="missionForm">
+            <div class="textbox">
+                <input type="number" placeholder="Mission ID" name="mission_id" required>
+            </div>
+            <div class="textbox">
+                <input type="text" placeholder="Mission Name" name="mission_name" required>
+            </div>
+            <div class="textbox">
+                <input type="date" placeholder="Launch Date" name="launch_date" required>
+            </div>
+            <div class="textbox">
+                <input type="text" placeholder="Mission Status" name="status" required>
+            </div>
+            <div class="textbox">
+                <textarea placeholder="Mission Description" name="description" required></textarea>
+            </div>
+            
+            <!-- Button Container -->
+            <div class="button-container">
+                <button type="submit" class="btn">Add Mission</button>
+            </div>
+        </form>
+        <div id="message" class="message"></div>
+    </div>
+    <script src="/js/add_mission.js"></script>
+</body>
+</html>

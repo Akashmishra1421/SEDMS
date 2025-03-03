@@ -1,0 +1,126 @@
+/* Global Styles */
+body {
+    font-family: 'Times New Roman', Times, serif;
+    background: url("/images/bg.jpg");
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    justify-content: center;
+}
+h1{
+    color: #21a1f1;
+}
+.header {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #f3f3f3;
+    text-shadow: 3px 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+    text-align: center;
+}
+.container h2 {
+color: #f3f3f3;
+}
+
+/* Forms */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.textbox {
+    margin: 15px 0;
+    width: 90%;
+}
+
+.textbox input {
+    padding: 15px;
+    width: 100%;
+    border: 2px solid #61dafb;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: border-color 0.3s, background-color 0.3s;
+}
+
+.textbox input:focus {
+    border-color: #21a1f1;
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.btn {
+    padding: 15px 25px;
+    background-color: #61dafb;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #21a1f1;
+    transform: scale(1.05);
+}
+
+.btn:active {
+    background-color: #1b91e0;
+}
+
+.message {
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+/* Links */
+.links {
+    margin-top: 20px;
+    color: #e0e0e0;
+}
+
+.links a {
+    color: #61dafb;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.links a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    .header h1 {
+        font-size: 2em;
+    }
+
+    .btn {
+        padding: 12px 20px;
+        font-size: 1em;
+    }
+}

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Astronaut - Space Exploration Data Management System</title>
+    <link rel="stylesheet" href="./styles/astronauts.css">
+</head>
+<body>
+    <div class="content">
+        <h1>Space Exploration Data Management System</h1>
+        <div class="container">
+            <form id="astronautForm">
+                <h1>Astronaut Details</h1>
+                <div class="textbox">
+                    <input type="number" placeholder="Astronaut ID" name="astronauts_id" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Name" name="astronauts_name" required>
+                </div>
+                <div class="textbox">
+                    <input type="date" placeholder="Date of Birth" name="birth_date" required>
+                </div>
+                <div class="textbox">
+                    <input type="text" placeholder="Nationality" name="nationality" required>
+                </div>
+                <div class="button-container">
+                    <button type="submit" class="btn">Add Astronaut</button>
+                </div>
+            </form>
+            <div id="message" class="message"></div>
+        </div>
+    </div>
+    <script src="/js/add_astronauts.js"></script>
+</body>
+</html>
